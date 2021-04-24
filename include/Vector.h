@@ -3,7 +3,7 @@
 
 class Vector {
   public: 
-    float x, y, z;
+    float x, y;
     Vector();
     Vector(float, float);
     void setCoords(float, float);
