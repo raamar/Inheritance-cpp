@@ -1,5 +1,6 @@
 #!/bin/bash
 build() {
+  rm -rf ./build/*.o
   mkdir -p build
   bPath=./build/$1.exe
 
