@@ -12,4 +12,4 @@ build() {
   $bPath
 }
 
-build $1
+build test
