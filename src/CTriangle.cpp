@@ -6,10 +6,15 @@ CTriangle::CTriangle() {
 
 CTriangle::CTriangle(Vector * _vertices) {
   verticesNum = 3;
-  vertices = _vertices;
+  vertices = new Vector[verticesNum];
+
+  for (int point = 0; point < verticesNum; point++)
+    vertices[point] = Vector(_vertices[point].x, _vertices[point].y);
 }
 
-CTriangle::~CTriangle() { };
+CTriangle::~CTriangle() { 
+  delete vertices;
+};
 
 float CTriangle::getArea() {
   float area = 0;

@@ -6,10 +6,15 @@ CQuad::CQuad() {
 
 CQuad::CQuad(Vector * _vertices) {
   verticesNum = 4;
-  vertices = _vertices;
+  vertices = new Vector[verticesNum];
+
+  for (int point = 0; point < verticesNum; point++)
+    vertices[point] = Vector(_vertices[point].x, _vertices[point].y);
 }
 
-CQuad::~CQuad() { };
+CQuad::~CQuad() { 
+  delete vertices;
+};
 
 float CQuad::getArea() {
   float area = 0;
