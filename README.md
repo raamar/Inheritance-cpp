@@ -1,7 +1,11 @@
 # CPP INHERITANCE HELLO WORLD
 
-## Build
+## Build / Debug
 
-```sh
-sh build.sh test
+```shell
+mkdir build
+cd build
+cmake ..
+cmake --build .
+./inheritance_cpp
 ```

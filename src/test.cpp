@@ -1,8 +1,15 @@
 #include <iostream>
-#include "include/Vector.h"
-#include "include/CTriangle.h"
-#include "include/CPoly.h"
-#include "include/CQuad.h"
+
+#include "Vector.h"
+#include "CTriangle.h"
+#include "CPoly.h"
+#include "CQuad.h"
+
+#ifdef _WIN32
+  #define CLEAR "cls"
+#else
+  #define CLEAR "clear"
+#endif
 
 void pause();
 
@@ -23,7 +30,7 @@ int main() {
   do {
     char c;
 
-    system("clear");
+    system(CLEAR);
 
     cout << "Khandryga IVB-011 -- 1 VAR\n";
     cout << "1 - Triangle\n";
@@ -48,7 +55,7 @@ int main() {
     if (c == '0') break;
 
     do {
-      system("clear");
+      system(CLEAR);
       cout << shape->getTitle() << endl;
       cout << "1 - Show points\n";
       cout << "2 - Get area\n";
@@ -57,7 +64,7 @@ int main() {
 
       cin >> c;
 
-      system("clear");
+      system(CLEAR);
       switch(c) {
         case '0': break;
         case '1':
